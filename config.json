@@ -1,0 +1,16 @@
+{
+  "dataset": "adrirana/political-corpus-es",
+  "dataset_revision": "3e0d9534eacd578c14c12a2b24dba0b9cdf0e2fc",
+  "sentiment_model": "pysentimiento/robertuito-sentiment-analysis",
+  "sentiment_revision": "a2cc0f67ebd705c55191e25a05ba23d885fcc09b",
+  "sentiment_batch_size": 16,
+  "spacy_model": "es_core_news_sm",
+  "mattr_window": 50,
+  "lda_topics": 12,
+  "lda_max_iter": 10,
+  "lda_min_df": 5,
+  "lda_max_df": 0.8,
+  "lda_max_features": 15000,
+  "lda_n_jobs": 1,
+  "seed": 42
+}

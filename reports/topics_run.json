@@ -1,0 +1,15 @@
+{
+  "prepared_sha256": "d048f86fed58f36fc0c55a25133540489934eecae22e0f4563c3ef54ba246c36",
+  "parameters": {
+    "mattr_window": 50,
+    "lda_topics": 12,
+    "lda_max_iter": 10,
+    "lda_min_df": 5,
+    "lda_max_df": 0.8,
+    "lda_max_features": 15000,
+    "lda_n_jobs": 1,
+    "seed": 42
+  },
+  "modeled_turns": 9972,
+  "vocabulary_size": 15000
+}

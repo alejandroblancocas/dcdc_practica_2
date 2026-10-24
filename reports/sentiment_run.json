@@ -1,0 +1,10 @@
+{
+  "prepared_sha256": "d048f86fed58f36fc0c55a25133540489934eecae22e0f4563c3ef54ba246c36",
+  "model": "pysentimiento/robertuito-sentiment-analysis",
+  "revision": "a2cc0f67ebd705c55191e25a05ba23d885fcc09b",
+  "max_length": 128,
+  "batch_size": 16,
+  "device": "cpu",
+  "eligible_turns": 9973,
+  "aggregation": "tokens dentro de frase; frases dentro de turno; turnos dentro de grupo"
+}
