@@ -1,8 +1,8 @@
 # Preparación y limpieza
 
-Este documento describe las transformaciones implementadas. Los conteos reales se
-añaden automáticamente al final al ejecutar `preparar.py`; no se presentan como
-realizadas transformaciones que todavía no se han ejecutado sobre el corpus completo.
+Este documento describe el proceso de preparación y limpieza aplicado al corpus de intervenciones parlamentarias utilizado en la Entrega 2. Las transformaciones se han ejecutado sobre las 10.000 intervenciones procedentes de la Entrega 1.
+
+Se documentan los criterios de validación, normalización, tratamiento de registros problemáticos y generación de representaciones lingüísticas, junto con las estadísticas reales obtenidas durante la ejecución de `preparar.py`.
 
 ## Fuente y trazabilidad
 
@@ -92,3 +92,14 @@ no se interpolan; solo los conteos observados se muestran como cero.
   "spacy_model_version": "3.8.0"
 }
 ```
+## Interpretación de los resultados de limpieza
+
+El proceso de validación conservó las 10.000 intervenciones originales, sin detectar duplicados exactos ni registros inválidos según los criterios establecidos.
+
+De las intervenciones conservadas, 9.973 (99,73 %) fueron consideradas aptas para calcular indicadores lingüísticos. Las 27 restantes (0,27 %) quedaron señaladas para revisión por la detección de referencias a otras lenguas en sus anotaciones editoriales.
+
+Estas intervenciones se mantienen en el corpus procesado para preservar la cobertura temporal y la trazabilidad de la muestra, pero se excluyen de los análisis lingüísticos automáticos. De esta forma, los indicadores de volumen siguen considerando la totalidad de las intervenciones válidas.
+
+En el análisis de tópicos, el modelo LDA utilizó finalmente 9.972 intervenciones, dado que una de las inicialmente aptas quedó sin términos tras aplicar los filtros de vocabulario.
+
+Los resultados de limpieza se almacenan en `data/processed/corpus_clean.parquet`, mientras que los registros señalados para revisión y las estadísticas complementarias se guardan en `reports/`.

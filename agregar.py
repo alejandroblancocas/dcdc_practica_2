@@ -55,7 +55,7 @@ def plot_lines(monthly, by_party):
     for ax, (metric, label) in zip(axes, specs):
         draw(ax, monthly, metric, label)
     fig.suptitle("Indicadores mensuales · muestra de la Entrega 1")
-    fig.savefig(REPORTS / "monthly_overview.png", dpi=160)
+    fig.savefig(REPORTS / "graficas" / "monthly_overview.png", dpi=160)
     plt.close(fig)
     parties = sorted(by_party.party.unique())
     fig, axes = plt.subplots(len(parties), 3, figsize=(15, 2.5 * len(parties)),
@@ -65,7 +65,7 @@ def plot_lines(monthly, by_party):
         for ax, (metric, label) in zip(axes[i], specs):
             draw(ax, data, metric, f"{party} · {label}")
     fig.suptitle("Indicadores mensuales por familia de partido")
-    fig.savefig(REPORTS / "monthly_by_party.png", dpi=160)
+    fig.savefig(REPORTS / "graficas" / "monthly_by_party.png", dpi=160)
     plt.close(fig)
 
 
