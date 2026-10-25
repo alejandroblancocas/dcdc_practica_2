@@ -2,6 +2,6 @@
 __pycache__/
 *.pyc
 data/raw/*
-data/processed/*
 models/*
 !**/.gitkeep
+graficos_legislaturas.py
