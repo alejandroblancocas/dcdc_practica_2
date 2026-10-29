@@ -144,26 +144,12 @@ En los mapas el gris indica ausencia de estimación.
 
 Para interpretar los tópicos, consultar `topic_labels.csv` (15 términos por tema)
 y `topic_examples.csv` (tres turnos representativos, fragmento y enlace a la fuente).
-La columna `label` se puede completar manualmente antes de volver a ejecutar
-`agregar.py`; si está vacía, los gráficos muestran los tres primeros términos.
 Al recalcular LDA se regeneran esas etiquetas. El modelo y su vocabulario se
 guardan en `models/lda.joblib`.
 
 Los archivos de datos, modelos y gráficos se excluyen de Git por defecto; deben
 incorporarse al paquete de entrega final una vez generados. No se distribuyen
 resultados de comprobación como si fueran resultados del corpus.
-
-## 6. Interpretación y siguiente paso
-
-Revisar los denominadores, los turnos marcados y el significado de los tópicos
-antes de interpretar las series. RoBERTuito procede de redes sociales: sus
-probabilidades no están validadas como medidas calibradas de discurso parlamentario.
-El sentimiento negativo no equivale a polarización. MATTR mide diversidad léxica,
-no complejidad sintáctica. No se han integrado resultados electorales ni microdatos
-del CIS. El detalle de sesgos figura en `motivation.md`.
-
-Tras obtener y examinar los resultados, formular la hipótesis verificable que
-requiere la entrega y completar la sección pendiente de `motivation.md`.
 
 ## Procedencia
 
